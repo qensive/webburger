@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', cursive;
+}
+
+/* css header */
+.header {
+    background-color: rgb(255, 255, 255);
+    height: 110px;
+    text-align: center;
+    margin-top: -5px;
+}
+
+div img {
+    width: 140px;
+    margin: -10px 30px 0 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: rgb(5, 30, 125);
+    font-size: 20pt;
+    padding: 20px;
+}
+
+#menu a:hover {
+    color: rgb(5, 30, 125);
+}
+
+/* css sidebar */
+h1 {
+    color: rgb(235, 69, 95);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11pt;
+    background-color: rgb(186, 215, 233);
+    border-radius: 10px;
+}
+
+p {
+    text-align: justify;
+    font-size: 12pt;
+    margin: 12px;
+}
+/* css beranda */
+
+div img {
+    width: 60%;
+    float: right;
+}
+
+h2 {
+    color:brown;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* css footer */
+h3 {
+    margin-top: 10px;
+    color:rgb(5, 30, 125);
+    text-align: center;
+}
