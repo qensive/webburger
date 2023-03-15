@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="calculator">
+  <input type="number" id="num1" placeholder="Masukkan angka pertama">
+  <input type="number" id="num2" placeholder="Masukkan angka kedua">
+  <div class="buttons">
+    <button id="multiply">x</button>
+    <button id="divide">÷</button>
+    <button id="power">^</button>
+  </div>
+  <p id="result"></p>
+</div>
+<style>
+    .calculator {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calculator input[type="number"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calculator button {
+  margin: 10px;
+  padding: 10px;
+  width: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.calculator button:hover {
+  background-color: #555;
+}
+
+.calculator #result {
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>
+<script>
+    const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const multiplyBtn = document.getElementById("multiply");
+const divideBtn = document.getElementById("divide");
+const powerBtn = document.getElementById("power");
+const result = document.getElementById("result");
+
+multiplyBtn.addEventListener("click", () => {
+  if (num1.value === "" || num2.value === "") {
+    result.innerHTML = "Maaf, angka belum terisi";
+  } else {
+    result.innerHTML = num1.value * num2.value;
+  }
+});
+
+divideBtn.addEventListener("click", () => {
+  if (num1.value === "" || num2.value === "") {
+    result.innerHTML = "Maaf, angka belum terisi";
+  } else if (num2.value == 0) {
+    result.innerHTML = "Tidak dapat dibagi dengan nol";
+  } else {
+    result.innerHTML = num1.value / num2.value;
+  }
+});
+
+powerBtn.addEventListener("click", () => {
+  if (num1.value === "" || num2.value === "") {
+    result.innerHTML = "Maaf, angka belum terisi";
+  } else {
+    result.innerHTML = Math.pow(num1.value, num2.value);
+  }
+});
+</script>
+</body>
+</html>
